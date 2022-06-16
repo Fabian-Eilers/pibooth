@@ -22,6 +22,7 @@ def get_cv_camera_proxy(port=None):
     :type port: int
     """
     if not cv2:
+        LOGGER.debug("OpenCV is not installed")
         return None  # OpenCV is not installed
 
     if port is not None:

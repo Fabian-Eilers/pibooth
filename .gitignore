@@ -75,3 +75,6 @@ target/
 # pyenv
 .python-version
 
+# Pipenv
+Pipfile
+Pipfile.lock
