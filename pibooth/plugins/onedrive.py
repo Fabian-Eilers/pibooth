@@ -31,7 +31,7 @@ def pibooth_startup(cfg, app):
 
 
 @pibooth.hookimpl
-def state_processing_exit(app):
+def state_print_enter(app):
     """Upload prefious picture to OneDrive."""
     name = os.path.basename(app.previous_picture_file)
     LOGGER.info(f"Upload {name} to Onedrive")
