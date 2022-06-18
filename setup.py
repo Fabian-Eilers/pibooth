@@ -68,6 +68,7 @@ def main():
             'Pillow>=8.3.1',
             'pygame>=1.9.6',
             'pygame-menu==4.0.7',
+            'graph-onedrive==0.4.0',
             'pygame-vkeyboard>=2.0.8',
             'psutil>=5.5.1',
             'pluggy>=0.13.1',

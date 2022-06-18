@@ -26,7 +26,7 @@ def pibooth_startup(cfg, app):
         refresh_token = cfg.get('ONEDRIVE', 'refresh_token')
     )
 
-    app.folder_id = app.onedrive.make_folder('pictures')
+    app.folder_id = app.onedrive.make_folder('FotoBox')
     LOGGER.info(f"USING FOLDER: {app.folder_id}")
 
 
