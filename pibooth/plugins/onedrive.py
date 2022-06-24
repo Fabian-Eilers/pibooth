@@ -104,6 +104,10 @@ def pibooth_startup(cfg, app):
     logging.info("Initializing OneDrive")
     app.onedrive = OneDrive(cfg)
 
+    # GEHÖRT HIER NICHT HIN!
+    logging.info("Empty Printer Queue.")
+    app.printer.cancel_all_tasks()
+
     plugins = app._pm.get_plugins()
     for plugin in plugins:
         if plugin.__class__.__name__ == "ViewPlugin":
@@ -137,5 +141,5 @@ def pibooth_cleanup(app):
 @pibooth.hookimpl
 def state_print_enter(cfg, app, win):
     """Empty printer Queue when disconnected"""
-    logging.info("hookimpl: state_print_enter")
+    logging.info("Empty Printer Queue.")
     app.printer.cancel_all_tasks()
