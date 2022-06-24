@@ -94,8 +94,8 @@ class OneDrive:
 
     def initialize_client(self):
         """Create required Folder Struture."""
-        self.private_folder = self.client.make_folder('FotoBox')
-        self.public_folder = self.client.make_folder('FotoBox (private)')
+        self.public_folder = self.client.make_folder('FotoBox')
+        self.private_folder = self.client.make_folder('FotoBox (private)')
 
 
 @pibooth.hookimpl
