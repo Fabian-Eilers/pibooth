@@ -147,6 +147,8 @@ class PicturePlugin(object):
                 if not osp.isdir(forgetdir):
                     os.makedirs(forgetdir)
                 os.rename(osp.join(savedir, app.picture_filename), osp.join(forgetdir, app.picture_filename))
+                app.forget_file = osp.join(forgetdir, app.picture_filename)
+
 
             self._reset_vars(app)
             app.count.forgotten += 1

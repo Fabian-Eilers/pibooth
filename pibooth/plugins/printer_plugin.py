@@ -62,4 +62,5 @@ class PrinterPlugin(object):
     @pibooth.hookimpl
     def state_print_do(self, cfg, app, events):
         if app.find_print_event(events) and app.previous_picture_file:
+            app.printer.cancel_all_tasks()
             self.print_picture(cfg, app)
